@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-var statsFile:File = File.new() #creates a working file for the info to go in
+var statsFile:File = File.new() 
 var statsFilePath:String = "res://LineEditSaving/stats.txt" 
 var stats:Dictionary = {}
 
