@@ -1,0 +1,305 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/Bold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/LineEntry.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/character info.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="Personal Info" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 1230.0
+margin_bottom = 670.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="character info" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1180.0
+margin_bottom = 200.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Basic Info" type="RichTextLabel" parent="VBoxContainer/character info"]
+margin_right = 250.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 250, 200 )
+custom_fonts/bold_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][u]Basic Info[/u]
+Name: Ghost	
+Race: Khetar	
+Gender: Female
+Age: 25
+Origin: Xecera
+Height: 5'6\"
+Weight: 120lbs
+Occupation: [REDACTED][/b]
+"
+text = "Basic Info
+Name: Ghost	
+Race: Khetar	
+Gender: Female
+Age: 25
+Origin: Xecera
+Height: 5'6\"
+Weight: 120lbs
+Occupation: [REDACTED]
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stats" type="RichTextLabel" parent="VBoxContainer/character info"]
+margin_left = 254.0
+margin_right = 554.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 300, 200 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/bold_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][color=grey][u]STATS[/u]
+Level:
+
+Wounds:
+
+AP:"
+text = "STATS
+Level:
+
+Wounds:
+
+AP:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level" type="LineEdit" parent="VBoxContainer/character info/Stats"]
+margin_left = 66.0
+margin_top = 15.0
+margin_right = 196.0
+margin_bottom = 45.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wounds" type="LineEdit" parent="VBoxContainer/character info/Stats"]
+margin_left = 76.0
+margin_top = 51.0
+margin_right = 206.0
+margin_bottom = 81.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AP" type="LineEdit" parent="VBoxContainer/character info/Stats"]
+margin_left = 36.0
+margin_top = 87.0
+margin_right = 166.0
+margin_bottom = 117.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stats2" type="RichTextLabel" parent="VBoxContainer/character info"]
+margin_left = 558.0
+margin_right = 858.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 300, 200 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/bold_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][color=grey]
+Resistances:     /     / 
+
+Condition:
+
+Fate Dice:"
+text = "
+Resistances:     /     / 
+
+Condition:
+
+Fate Dice:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resistances1" type="LineEdit" parent="VBoxContainer/character info/Stats2"]
+margin_left = 122.0
+margin_top = 15.0
+margin_right = 218.0
+margin_bottom = 45.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.266667, 0.266667, 1 )
+context_menu_enabled = false
+placeholder_text = "+10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resistances2" type="LineEdit" parent="VBoxContainer/character info/Stats2"]
+margin_left = 172.0
+margin_top = 15.0
+margin_right = 268.0
+margin_bottom = 45.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.380392, 0.533333, 1, 1 )
+expand_to_text_length = true
+placeholder_text = "+8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resistances3" type="LineEdit" parent="VBoxContainer/character info/Stats2"]
+margin_left = 222.0
+margin_top = 15.0
+margin_right = 318.0
+margin_bottom = 45.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.494118, 1, 0.45098, 1 )
+expand_to_text_length = true
+placeholder_text = "+5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Condition" type="LineEdit" parent="VBoxContainer/character info/Stats2"]
+margin_left = 102.0
+margin_top = 51.0
+margin_right = 232.0
+margin_bottom = 81.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FateDice" type="LineEdit" parent="VBoxContainer/character info/Stats2"]
+margin_left = 102.0
+margin_top = 87.0
+margin_right = 232.0
+margin_bottom = 117.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stats3" type="RichTextLabel" parent="VBoxContainer/character info"]
+margin_left = 862.0
+margin_right = 1162.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 300, 200 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/bold_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[b][color=grey]
+Move Distance:
+
+Initiative:
+
+Carry Capacity:    "
+text = "
+Move Distance:
+
+Initiative:
+
+Carry Capacity:    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveDistance" type="LineEdit" parent="VBoxContainer/character info/Stats3"]
+margin_left = 148.0
+margin_top = 18.0
+margin_right = 278.0
+margin_bottom = 48.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Initiative" type="LineEdit" parent="VBoxContainer/character info/Stats3"]
+margin_left = 118.0
+margin_top = 51.0
+margin_right = 248.0
+margin_bottom = 81.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CarryCapacity" type="LineEdit" parent="VBoxContainer/character info/Stats3"]
+margin_left = 158.0
+margin_top = 87.0
+margin_right = 288.0
+margin_bottom = 117.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+expand_to_text_length = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 204.0
+margin_right = 1180.0
+margin_bottom = 620.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+[connection signal="text_entered" from="VBoxContainer/character info/Stats/Level" to="VBoxContainer/character info" method="_on_Level_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats/Wounds" to="VBoxContainer/character info" method="_on_Wounds_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats/AP" to="VBoxContainer/character info" method="_on_AP_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats2/Resistances1" to="VBoxContainer/character info" method="_on_Resistances1_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats2/Resistances2" to="VBoxContainer/character info" method="_on_Resistances2_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats2/Resistances3" to="VBoxContainer/character info" method="_on_Resistances3_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats2/Condition" to="VBoxContainer/character info" method="_on_Condition_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats2/FateDice" to="VBoxContainer/character info" method="_on_Fate_Dice_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats3/MoveDistance" to="VBoxContainer/character info" method="_on_MoveDistance_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats3/Initiative" to="VBoxContainer/character info" method="_on_Initiative_text_entered"]
+[connection signal="text_entered" from="VBoxContainer/character info/Stats3/CarryCapacity" to="VBoxContainer/character info" method="_on_CarryCapacity_text_entered"]
