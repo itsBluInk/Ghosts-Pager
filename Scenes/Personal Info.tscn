@@ -45,7 +45,7 @@ margin_bottom = 200.0
 rect_min_size = Vector2( 250, 200 )
 custom_fonts/bold_font = ExtResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[b][u]Basic Info[/u]
+bbcode_text = "[b][u]Personal Info[/u]
 Name: Ghost	
 Race: Khetar	
 Gender: Female
@@ -55,7 +55,7 @@ Height: 5'6\"
 Weight: 120lbs
 Occupation: [REDACTED][/b]
 "
-text = "Basic Info
+text = "Personal Info
 Name: Ghost	
 Race: Khetar	
 Gender: Female

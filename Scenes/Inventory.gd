@@ -21,7 +21,6 @@ func loadInventoryFromFile()->void:
 
 func _on_LineEdit_text_changed(new_text):
 	inventory["LineEdit"] = new_text
-	print("fart")
 	saveInventoryToFile()
 
 func _on_LineEdit2_text_changed(new_text):
@@ -47,7 +46,6 @@ func _on_LineEdit6_text_changed(new_text):
 func _on_LineEdit7_text_changed(new_text):
 	inventory["LineEdit7"] = new_text
 	saveInventoryToFile()
-
 
 func _on_LineEdit8_text_changed(new_text):
 	inventory["LineEdit8"] = new_text
