@@ -7,6 +7,7 @@ var stats:Dictionary = {}
 func _ready():
 	loadStatsFromFile()
 	print(stats)
+	fillValues()
 
 func saveStatsToFile ()->void:
 	statsFile.open(statsFilePath,File.WRITE)
@@ -61,3 +62,16 @@ func _on_Initiative_text_entered(new_text):
 func _on_CarryCapacity_text_entered(new_text):
 	stats["CarryCapacity"] = new_text
 	saveStatsToFile()
+
+func fillValues():
+	$Stats/Level.text = stats["Level"]
+	$Stats/Wounds.text = stats["Wounds"]
+	$Stats/AP.text = stats["AP"]
+	$Stats2/Resistances1.text = stats["Resistances1"]
+	$Stats2/Resistances2.text = stats["Resistances2"]
+	$Stats2/Resistances3.text = stats["Resistances3"]
+	$Stats2/Condition.text = stats["Condition"]
+	$Stats2/FateDice.text = stats["FateDice"]
+	$Stats3/MoveDistance.text = stats["MoveDistance"]
+	$Stats3/Initiative.text = stats["Initiative"]
+	$Stats3/CarryCapacity.text = stats["CarryCapacity"]

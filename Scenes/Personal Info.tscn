@@ -1,16 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Fonts/Bold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Fonts/LineEntry.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/character info.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Inventory.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/gotoMainMenu.gd" type="Script" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
 [node name="Personal Info" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -249,9 +256,9 @@ __meta__ = {
 
 [node name="MoveDistance" type="LineEdit" parent="VBoxContainer/character info/Stats3"]
 margin_left = 148.0
-margin_top = 18.0
+margin_top = 15.0
 margin_right = 278.0
-margin_bottom = 48.0
+margin_bottom = 45.0
 custom_styles/focus = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = ExtResource( 2 )
@@ -286,12 +293,173 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
 margin_top = 204.0
 margin_right = 1180.0
-margin_bottom = 620.0
+margin_bottom = 234.0
+rect_min_size = Vector2( 30, 30 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[u]Inventory[/u]
+"
+text = "Inventory
+"
+scroll_active = false
+
+[node name="Inventory" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 238.0
+margin_right = 1180.0
+margin_bottom = 648.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Inventory"]
+margin_right = 1180.0
+margin_bottom = 410.0
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_right = 1180.0
+margin_bottom = 19.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 23.0
+margin_right = 1180.0
+margin_bottom = 42.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit3" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 46.0
+margin_right = 1180.0
+margin_bottom = 65.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit4" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 69.0
+margin_right = 1180.0
+margin_bottom = 88.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit5" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 92.0
+margin_right = 1180.0
+margin_bottom = 111.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit6" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 115.0
+margin_right = 1180.0
+margin_bottom = 134.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit7" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 138.0
+margin_right = 1180.0
+margin_bottom = 157.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit8" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 161.0
+margin_right = 1180.0
+margin_bottom = 180.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit9" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 184.0
+margin_right = 1180.0
+margin_bottom = 203.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit10" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 207.0
+margin_right = 1180.0
+margin_bottom = 226.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit11" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 230.0
+margin_right = 1180.0
+margin_bottom = 249.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit12" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 253.0
+margin_right = 1180.0
+margin_bottom = 272.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit13" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 276.0
+margin_right = 1180.0
+margin_bottom = 295.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit14" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 299.0
+margin_right = 1180.0
+margin_bottom = 318.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit15" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 322.0
+margin_right = 1180.0
+margin_bottom = 341.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit16" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 345.0
+margin_right = 1180.0
+margin_bottom = 364.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit17" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 368.0
+margin_right = 1180.0
+margin_bottom = 387.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+
+[node name="LineEdit18" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
+margin_top = 391.0
+margin_right = 1180.0
+margin_bottom = 410.0
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = ExtResource( 1 )
 [connection signal="text_entered" from="VBoxContainer/character info/Stats/Level" to="VBoxContainer/character info" method="_on_Level_text_entered"]
 [connection signal="text_entered" from="VBoxContainer/character info/Stats/Wounds" to="VBoxContainer/character info" method="_on_Wounds_text_entered"]
 [connection signal="text_entered" from="VBoxContainer/character info/Stats/AP" to="VBoxContainer/character info" method="_on_AP_text_entered"]
@@ -303,3 +471,21 @@ size_flags_vertical = 3
 [connection signal="text_entered" from="VBoxContainer/character info/Stats3/MoveDistance" to="VBoxContainer/character info" method="_on_MoveDistance_text_entered"]
 [connection signal="text_entered" from="VBoxContainer/character info/Stats3/Initiative" to="VBoxContainer/character info" method="_on_Initiative_text_entered"]
 [connection signal="text_entered" from="VBoxContainer/character info/Stats3/CarryCapacity" to="VBoxContainer/character info" method="_on_CarryCapacity_text_entered"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit" to="VBoxContainer/Inventory" method="_on_LineEdit_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit2" to="VBoxContainer/Inventory" method="_on_LineEdit2_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit3" to="VBoxContainer/Inventory" method="_on_LineEdit3_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit4" to="VBoxContainer/Inventory" method="_on_LineEdit4_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit5" to="VBoxContainer/Inventory" method="_on_LineEdit5_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit6" to="VBoxContainer/Inventory" method="_on_LineEdit6_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit7" to="VBoxContainer/Inventory" method="_on_LineEdit7_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit8" to="VBoxContainer/Inventory" method="_on_LineEdit8_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit9" to="VBoxContainer/Inventory" method="_on_LineEdit9_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit10" to="VBoxContainer/Inventory" method="_on_LineEdit10_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit11" to="VBoxContainer/Inventory" method="_on_LineEdit11_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit12" to="VBoxContainer/Inventory" method="_on_LineEdit12_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit13" to="VBoxContainer/Inventory" method="_on_LineEdit13_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit14" to="VBoxContainer/Inventory" method="_on_LineEdit14_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit15" to="VBoxContainer/Inventory" method="_on_LineEdit15_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit16" to="VBoxContainer/Inventory" method="_on_LineEdit16_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit17" to="VBoxContainer/Inventory" method="_on_LineEdit17_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit18" to="VBoxContainer/Inventory" method="_on_LineEdit18_text_changed"]

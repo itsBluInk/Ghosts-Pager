@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=3]
 [ext_resource path="res://Fonts/Bold.tres" type="DynamicFont" id=4]
@@ -36,20 +36,29 @@ tracks/0/keys = {
 "values": [ 0.0, 0.316, 0.342, 0.381, 0.407, 0.407, 1.0 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "scroll_up"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -220 ) ]
-}
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -132,9 +141,6 @@ __meta__ = {
 [node name="access_granted_anim_player" type="AnimationPlayer" parent="Menu/initialize/opening_text/access_granted"]
 anims/access_granted_anim = SubResource( 2 )
 
-[node name="scroll_up_anim_player" type="AnimationPlayer" parent="Menu/initialize"]
-anims/scroll_up = SubResource( 3 )
-
 [node name="buttons" type="VBoxContainer" parent="."]
 margin_left = 50.0
 margin_top = 50.0
@@ -147,52 +153,80 @@ __meta__ = {
 [node name="personal_info" type="Button" parent="buttons"]
 margin_right = 1180.0
 margin_bottom = 25.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/focus = SubResource( 7 )
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
 shortcut_in_tooltip = false
 action_mode = 0
 text = "Personal Info"
 flat = true
 align = 0
 
-[node name="codex" type="Button" parent="buttons"]
+[node name="Equipment" type="Button" parent="buttons"]
 margin_top = 29.0
 margin_right = 1180.0
 margin_bottom = 54.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/focus = SubResource( 6 )
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
+action_mode = 0
+text = "Equipment"
+flat = true
+align = 0
+
+[node name="codex" type="Button" parent="buttons"]
+margin_top = 58.0
+margin_right = 1180.0
+margin_bottom = 83.0
+custom_styles/hover = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
 action_mode = 0
 text = "Codex"
 flat = true
 align = 0
 
 [node name="view_logs" type="Button" parent="buttons"]
-margin_top = 58.0
+margin_top = 87.0
 margin_right = 1180.0
-margin_bottom = 83.0
+margin_bottom = 112.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
 action_mode = 0
 text = "View Logs"
 flat = true
 align = 0
 
 [node name="combat" type="Button" parent="buttons"]
-margin_top = 87.0
+margin_top = 116.0
 margin_right = 1180.0
-margin_bottom = 112.0
+margin_bottom = 141.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/focus = SubResource( 14 )
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
 action_mode = 0
 text = "Combat"
 flat = true
 align = 0
 
 [node name="options" type="Button" parent="buttons"]
-margin_top = 116.0
+margin_top = 145.0
 margin_right = 1180.0
-margin_bottom = 141.0
+margin_bottom = 170.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
 action_mode = 0
 text = "Options"
 flat = true
 align = 0
 [connection signal="animation_finished" from="Menu/initialize/opening_text/opeining_text_anim_player" to="." method="_on_opeining_text_anim_player_animation_finished"]
 [connection signal="animation_finished" from="Menu/initialize/opening_text/access_granted/access_granted_anim_player" to="." method="_on_access_granted_anim_player_animation_finished"]
-[connection signal="animation_finished" from="Menu/initialize/scroll_up_anim_player" to="." method="_on_scroll_up_anim_player_animation_finished"]
+[connection signal="pressed" from="buttons/personal_info" to="." method="_on_personal_info_pressed"]
