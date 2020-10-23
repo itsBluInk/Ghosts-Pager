@@ -21,6 +21,9 @@ func _on_access_granted_anim_player_animation_finished(anim_name):
 func _on_personal_info_pressed():
 	get_tree().change_scene("res://Scenes/Personal Info.tscn")	
 
+func _on_Equipment_pressed():
+	get_tree().change_scene("res://Scenes/Equipment.tscn")	
+
 func _unhandled_key_input(event):
 	if Input.is_action_pressed("ui_accept"):
 		print("Skip")

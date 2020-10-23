@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 var equipmentFile:File = File.new() 
-var equipmentFilePath:String = "res://LineEditSaving/equipment.json" 
+var equipmentFilePath:String =  "res://LineEditSaving/equipment1.json"
 var equipment:Dictionary = {}
 
 func _ready():
@@ -10,6 +10,7 @@ func _ready():
 	FillEquipmentValues()
 
 func saveEquipmentToFile ()->void:
+	print("saved")
 	equipmentFile.open(equipmentFilePath,File.WRITE)
 	equipmentFile.store_line(to_json(equipment))
 	equipmentFile.close()
@@ -20,6 +21,7 @@ func loadEquipmentFromFile()->void:
 	equipmentFile.close()
 
 func _on_Name_text_changed(new_text):
+	print("Name changed")
 	equipment["Name"] = new_text
 	saveEquipmentToFile()
 
@@ -56,5 +58,3 @@ func FillEquipmentValues():
 	$HBoxContainer/Resist3.text = equipment["Resist_3"]
 	$HBoxContainer/tR.text = equipment["tR"]
 	$Description.text = equipment["Description"]
-
-
