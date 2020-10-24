@@ -24,6 +24,9 @@ func _on_personal_info_pressed():
 func _on_Equipment_pressed():
 	get_tree().change_scene("res://Scenes/Equipment.tscn")	
 
+func _on_combat_pressed():
+	get_tree().change_scene("res://Scenes/Combat.tscn")
+
 func _unhandled_key_input(event):
 	if Input.is_action_pressed("ui_accept"):
 		print("Skip")
@@ -31,3 +34,4 @@ func _unhandled_key_input(event):
 		access_granted_anim.stop()
 		buttons.visible = true
 		$Menu/initialize.visible = false
+

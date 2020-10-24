@@ -1,7 +1,7 @@
 extends HBoxContainer
 
 var combatFile:File = File.new()
-var combatFilePath:String = "res://LineEditSaving/combat1.json"
+var combatFilePath:String = "res://LineEditSaving/combat3.json"
 var combat:Dictionary = {}
 
 func _ready():
