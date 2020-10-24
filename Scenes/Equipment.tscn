@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fonts/Bold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scenes/gotoMainMenu.gd" type="Script" id=2]
@@ -19,6 +19,10 @@
 [sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
 
 [node name="Equipment" type="Control"]
 anchor_right = 1.0
@@ -523,6 +527,18 @@ custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.282353, 0.282353, 0.282353, 1 )
 editable = false
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_top = 379.0
+margin_right = 1180.0
+margin_bottom = 404.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
+text = "Weapons & Equipment"
+flat = true
+align = 2
 [connection signal="text_changed" from="VBoxContainer/VBoxContainer/HBoxContainer/Name" to="VBoxContainer/VBoxContainer" method="_on_Name_text_changed"]
 [connection signal="text_changed" from="VBoxContainer/VBoxContainer/HBoxContainer/Section" to="VBoxContainer/VBoxContainer" method="_on_Section_text_changed"]
 [connection signal="text_changed" from="VBoxContainer/VBoxContainer/HBoxContainer/Resist1" to="VBoxContainer/VBoxContainer" method="_on_Resist1_text_changed"]
@@ -558,3 +574,4 @@ editable = false
 [connection signal="text_changed" from="VBoxContainer/VBoxContainer5/HBoxContainer/Resist3" to="VBoxContainer/VBoxContainer5" method="_on_Resist3_text_changed"]
 [connection signal="text_changed" from="VBoxContainer/VBoxContainer5/HBoxContainer/tR" to="VBoxContainer/VBoxContainer5" method="_on_tR_text_changed"]
 [connection signal="text_changed" from="VBoxContainer/VBoxContainer5/Description" to="VBoxContainer/VBoxContainer5" method="_on_Description_text_changed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]

@@ -10,7 +10,6 @@ func _ready():
 	FillEquipmentValues()
 
 func saveEquipmentToFile ()->void:
-	print("saved")
 	equipmentFile.open(equipmentFilePath,File.WRITE)
 	equipmentFile.store_line(to_json(equipment))
 	equipmentFile.close()
@@ -21,7 +20,6 @@ func loadEquipmentFromFile()->void:
 	equipmentFile.close()
 
 func _on_Name_text_changed(new_text):
-	print("Name changed")
 	equipment["Name"] = new_text
 	saveEquipmentToFile()
 

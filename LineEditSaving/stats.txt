@@ -1,1 +1,0 @@
-{"AP":"100/100","CarryCapacity":"8.5/8.5tR","Condition":"Normal","FateDice":"1","Initiative":"d25+1","Level":"5","MoveDistance":"7 Units","Resistances1":"+10","Resistances2":"+8","Resistances3":"","Wounds":"6/6"}

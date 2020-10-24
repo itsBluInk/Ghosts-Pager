@@ -40,21 +40,21 @@ tracks/0/keys = {
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=5]
-
-[sub_resource type="StyleBoxEmpty" id=6]
-
-[sub_resource type="StyleBoxEmpty" id=7]
-
-[sub_resource type="StyleBoxEmpty" id=8]
-
 [sub_resource type="StyleBoxEmpty" id=9]
 
 [sub_resource type="StyleBoxEmpty" id=10]
 
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
 [sub_resource type="StyleBoxEmpty" id=11]
 
 [sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=13]
 
@@ -163,10 +163,23 @@ text = "Personal Info"
 flat = true
 align = 0
 
-[node name="Equipment" type="Button" parent="buttons"]
+[node name="logs" type="Button" parent="buttons"]
 margin_top = 29.0
 margin_right = 1180.0
 margin_bottom = 54.0
+custom_styles/hover = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
+action_mode = 0
+text = "Logs"
+flat = true
+align = 0
+
+[node name="Equipment" type="Button" parent="buttons"]
+margin_top = 58.0
+margin_right = 1180.0
+margin_bottom = 83.0
 custom_styles/hover = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_fonts/font = ExtResource( 4 )
@@ -176,36 +189,10 @@ text = "Equipment"
 flat = true
 align = 0
 
-[node name="codex" type="Button" parent="buttons"]
-margin_top = 58.0
-margin_right = 1180.0
-margin_bottom = 83.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/focus = SubResource( 8 )
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
-action_mode = 0
-text = "Codex"
-flat = true
-align = 0
-
-[node name="view_logs" type="Button" parent="buttons"]
+[node name="combat" type="Button" parent="buttons"]
 margin_top = 87.0
 margin_right = 1180.0
 margin_bottom = 112.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/focus = SubResource( 10 )
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
-action_mode = 0
-text = "View Logs"
-flat = true
-align = 0
-
-[node name="combat" type="Button" parent="buttons"]
-margin_top = 116.0
-margin_right = 1180.0
-margin_bottom = 141.0
 custom_styles/hover = SubResource( 11 )
 custom_styles/focus = SubResource( 12 )
 custom_fonts/font = ExtResource( 4 )
@@ -215,10 +202,36 @@ text = "Combat"
 flat = true
 align = 0
 
-[node name="options" type="Button" parent="buttons"]
+[node name="skills" type="Button" parent="buttons"]
+margin_top = 116.0
+margin_right = 1180.0
+margin_bottom = 141.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
+action_mode = 0
+text = "Skills"
+flat = true
+align = 0
+
+[node name="codex" type="Button" parent="buttons"]
 margin_top = 145.0
 margin_right = 1180.0
 margin_bottom = 170.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_pressed = Color( 0.517647, 0.517647, 0.517647, 1 )
+action_mode = 0
+text = "Codex"
+flat = true
+align = 0
+
+[node name="options" type="Button" parent="buttons"]
+margin_top = 174.0
+margin_right = 1180.0
+margin_bottom = 199.0
 custom_styles/hover = SubResource( 13 )
 custom_styles/focus = SubResource( 14 )
 custom_fonts/font = ExtResource( 4 )

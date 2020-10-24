@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Fonts/Bold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Fonts/LineEntry.tres" type="DynamicFont" id=2]
@@ -13,6 +13,10 @@
 [sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
 
 [node name="Personal Info" type="Control"]
 anchor_right = 1.0
@@ -39,32 +43,137 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Basic Info" type="RichTextLabel" parent="VBoxContainer/character info"]
+[node name="BasicInfo" type="RichTextLabel" parent="VBoxContainer/character info"]
 margin_right = 250.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 250, 200 )
 custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[b][u]Personal Info[/u]
-Name: Ghost	
-Race: Khetar	
-Gender: Female
-Age: 25
-Origin: Xecera
-Height: 5'6\"
-Weight: 120lbs
-Occupation: [REDACTED][/b]
+bbcode_text = "[u]Personal Info[/u]
+Name:
+Race:
+Sex:
+Age:
+Origin:
+Height:
+Weight:
+Occupation:
 "
 text = "Personal Info
-Name: Ghost	
-Race: Khetar	
-Gender: Female
-Age: 25
-Origin: Xecera
-Height: 5'6\"
-Weight: 120lbs
-Occupation: [REDACTED]
+Name:
+Race:
+Sex:
+Age:
+Origin:
+Height:
+Weight:
+Occupation:
 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoName" type="LineEdit" parent="VBoxContainer/character info/BasicInfo"]
+margin_left = 50.0
+margin_top = 17.0
+margin_right = 240.0
+margin_bottom = 41.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "--"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoRace" type="LineEdit" parent="VBoxContainer/character info/BasicInfo"]
+margin_left = 50.0
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 59.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "--"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoGender" type="LineEdit" parent="VBoxContainer/character info/BasicInfo"]
+margin_left = 40.0
+margin_top = 53.0
+margin_right = 210.0
+margin_bottom = 77.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "--"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoAge" type="LineEdit" parent="VBoxContainer/character info/BasicInfo"]
+margin_left = 40.0
+margin_top = 70.0
+margin_right = 210.0
+margin_bottom = 94.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "--"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoOrigin" type="LineEdit" parent="VBoxContainer/character info/BasicInfo"]
+margin_left = 70.0
+margin_top = 89.0
+margin_right = 240.0
+margin_bottom = 113.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "--"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoHeight" type="LineEdit" parent="VBoxContainer/character info/BasicInfo"]
+margin_left = 70.0
+margin_top = 107.0
+margin_right = 240.0
+margin_bottom = 131.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "0'0\""
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoWeight" type="LineEdit" parent="VBoxContainer/character info/BasicInfo"]
+margin_left = 70.0
+margin_top = 126.0
+margin_right = 240.0
+margin_bottom = 150.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "0tR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoOccupation" type="LineEdit" parent="VBoxContainer/character info/BasicInfo"]
+margin_left = 103.0
+margin_top = 143.0
+margin_right = 243.0
+margin_bottom = 167.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "[REDACTED]"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -99,10 +208,11 @@ margin_left = 66.0
 margin_top = 15.0
 margin_right = 196.0
 margin_bottom = 45.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 expand_to_text_length = true
+placeholder_text = "--"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -112,10 +222,11 @@ margin_left = 76.0
 margin_top = 51.0
 margin_right = 206.0
 margin_bottom = 81.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 expand_to_text_length = true
+placeholder_text = "0/0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -125,10 +236,11 @@ margin_left = 36.0
 margin_top = 87.0
 margin_right = 166.0
 margin_bottom = 117.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 expand_to_text_length = true
+placeholder_text = "0/0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -163,12 +275,12 @@ margin_left = 122.0
 margin_top = 15.0
 margin_right = 218.0
 margin_bottom = 45.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 0.266667, 0.266667, 1 )
 context_menu_enabled = false
-placeholder_text = "+10"
+placeholder_text = "+0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -178,12 +290,12 @@ margin_left = 172.0
 margin_top = 15.0
 margin_right = 268.0
 margin_bottom = 45.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.380392, 0.533333, 1, 1 )
 expand_to_text_length = true
-placeholder_text = "+8"
+placeholder_text = "+0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -193,12 +305,12 @@ margin_left = 222.0
 margin_top = 15.0
 margin_right = 318.0
 margin_bottom = 45.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.494118, 1, 0.45098, 1 )
 expand_to_text_length = true
-placeholder_text = "+5"
+placeholder_text = "+0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -208,10 +320,11 @@ margin_left = 102.0
 margin_top = 51.0
 margin_right = 232.0
 margin_bottom = 81.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 expand_to_text_length = true
+placeholder_text = "[Normal]"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -221,10 +334,11 @@ margin_left = 102.0
 margin_top = 87.0
 margin_right = 232.0
 margin_bottom = 117.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 expand_to_text_length = true
+placeholder_text = "1/5"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -259,10 +373,11 @@ margin_left = 148.0
 margin_top = 15.0
 margin_right = 278.0
 margin_bottom = 45.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 expand_to_text_length = true
+placeholder_text = "0 Units"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -272,10 +387,11 @@ margin_left = 118.0
 margin_top = 51.0
 margin_right = 248.0
 margin_bottom = 81.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 expand_to_text_length = true
+placeholder_text = "d25 + 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -285,10 +401,11 @@ margin_left = 158.0
 margin_top = 87.0
 margin_right = 288.0
 margin_bottom = 117.0
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 2 )
 expand_to_text_length = true
+placeholder_text = "0/0tR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -321,156 +438,164 @@ margin_bottom = 410.0
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_right = 1180.0
 margin_bottom = 19.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit2" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 23.0
 margin_right = 1180.0
 margin_bottom = 42.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit3" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 46.0
 margin_right = 1180.0
 margin_bottom = 65.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit4" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 69.0
 margin_right = 1180.0
 margin_bottom = 88.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit5" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 92.0
 margin_right = 1180.0
 margin_bottom = 111.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit6" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 115.0
 margin_right = 1180.0
 margin_bottom = 134.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit7" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 138.0
 margin_right = 1180.0
 margin_bottom = 157.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit8" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 161.0
 margin_right = 1180.0
 margin_bottom = 180.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit9" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 184.0
 margin_right = 1180.0
 margin_bottom = 203.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit10" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 207.0
 margin_right = 1180.0
 margin_bottom = 226.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit11" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 230.0
 margin_right = 1180.0
 margin_bottom = 249.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit12" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 253.0
 margin_right = 1180.0
 margin_bottom = 272.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit13" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 276.0
 margin_right = 1180.0
 margin_bottom = 295.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit14" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 299.0
 margin_right = 1180.0
 margin_bottom = 318.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit15" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 322.0
 margin_right = 1180.0
 margin_bottom = 341.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit16" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 345.0
 margin_right = 1180.0
 margin_bottom = 364.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit17" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 368.0
 margin_right = 1180.0
 margin_bottom = 387.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
 
 [node name="LineEdit18" type="LineEdit" parent="VBoxContainer/Inventory/VBoxContainer"]
 margin_top = 391.0
 margin_right = 1180.0
 margin_bottom = 410.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 1 )
-[connection signal="text_entered" from="VBoxContainer/character info/Stats/Level" to="VBoxContainer/character info" method="_on_Level_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats/Wounds" to="VBoxContainer/character info" method="_on_Wounds_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats/AP" to="VBoxContainer/character info" method="_on_AP_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats2/Resistances1" to="VBoxContainer/character info" method="_on_Resistances1_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats2/Resistances2" to="VBoxContainer/character info" method="_on_Resistances2_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats2/Resistances3" to="VBoxContainer/character info" method="_on_Resistances3_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats2/Condition" to="VBoxContainer/character info" method="_on_Condition_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats2/FateDice" to="VBoxContainer/character info" method="_on_Fate_Dice_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats3/MoveDistance" to="VBoxContainer/character info" method="_on_MoveDistance_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats3/Initiative" to="VBoxContainer/character info" method="_on_Initiative_text_entered"]
-[connection signal="text_entered" from="VBoxContainer/character info/Stats3/CarryCapacity" to="VBoxContainer/character info" method="_on_CarryCapacity_text_entered"]
+[connection signal="text_changed" from="VBoxContainer/character info/BasicInfo/InfoName" to="VBoxContainer/character info" method="_on_InfoName_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/BasicInfo/InfoRace" to="VBoxContainer/character info" method="_on_InfoRace_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/BasicInfo/InfoGender" to="VBoxContainer/character info" method="_on_InfoGender_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/BasicInfo/InfoAge" to="VBoxContainer/character info" method="_on_InfoAge_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/BasicInfo/InfoOrigin" to="VBoxContainer/character info" method="_on_InfoOrigin_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/BasicInfo/InfoHeight" to="VBoxContainer/character info" method="_on_InfoHeight_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/BasicInfo/InfoWeight" to="VBoxContainer/character info" method="_on_InfoWeight_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/BasicInfo/InfoOccupation" to="VBoxContainer/character info" method="_on_InfoOccupation_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats/Level" to="VBoxContainer/character info" method="_on_Level_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats/Wounds" to="VBoxContainer/character info" method="_on_Wounds_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats/AP" to="VBoxContainer/character info" method="_on_AP_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats2/Resistances1" to="VBoxContainer/character info" method="_on_Resistances1_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats2/Resistances2" to="VBoxContainer/character info" method="_on_Resistances2_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats2/Resistances3" to="VBoxContainer/character info" method="_on_Resistances3_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats2/Condition" to="VBoxContainer/character info" method="_on_Condition_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats2/FateDice" to="VBoxContainer/character info" method="_on_FateDice_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats3/MoveDistance" to="VBoxContainer/character info" method="_on_MoveDistance_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats3/Initiative" to="VBoxContainer/character info" method="_on_Initiative_text_changed"]
+[connection signal="text_changed" from="VBoxContainer/character info/Stats3/CarryCapacity" to="VBoxContainer/character info" method="_on_CarryCapacity_text_changed"]
 [connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit" to="VBoxContainer/Inventory" method="_on_LineEdit_text_changed"]
 [connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit2" to="VBoxContainer/Inventory" method="_on_LineEdit2_text_changed"]
 [connection signal="text_changed" from="VBoxContainer/Inventory/VBoxContainer/LineEdit3" to="VBoxContainer/Inventory" method="_on_LineEdit3_text_changed"]

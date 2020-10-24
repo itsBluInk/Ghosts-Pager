@@ -1,7 +1,7 @@
 extends MarginContainer
 
 var inventoryFile:File = File.new() 
-var inventoryFilePath:String = "res://LineEditSaving/inventory.txt" 
+var inventoryFilePath:String = "res://LineEditSaving/inventory.json" 
 var inventory:Dictionary = {}
 
 func _ready():
